@@ -9,9 +9,34 @@ body {
 }
 
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
   text-align: center;
+  flex-wrap: wrap; /* 🔥 permite que se bajen cuando no caben */
+  padding: 20px;
+}
+
+.content {
+  max-width: 400px;
 }
 
 h1 {
   color: #ff4d6d;
+}
+
+/* STICKERS */
+.sticker {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* 📱 Cuando la pantalla es pequeña */
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
 }
